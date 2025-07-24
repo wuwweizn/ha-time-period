@@ -17,22 +17,24 @@ class TimePeriodConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         return self.async_show_form(
             step_id="user",
-            data_schema=vol.Schema({}),
+            data_schema=vol.Schema({}),  # 暂时无选项
         )
 
     @staticmethod
     @callback
     def async_get_options_flow(config_entry):
-        """Get options flow."""
+        """Return the options flow handler."""
         return TimePeriodOptionsFlowHandler(config_entry)
 
-class TimePeriodOptionsFlowHandler(config_entries.OptionsFlow):
-    """Handle config flow options."""
 
-    def __init__(self, config_entry):
-        self.config_entry = config_entry
+class TimePeriodOptionsFlowHandler(config_entries.OptionsFlow):
+    """Handle options flow."""
+
+    def __init__(self, config_entry: config_entries.ConfigEntry):
+        # 不再手动设置 self.config_entry，以避免弃用警告
+        pass
 
     async def async_step_init(self, user_input=None):
-        """Manage the options."""
-        # 这里可扩展时间段配置，目前保持空
+        """Handle the options step."""
+        # 这里可以扩展配置选项，目前保持为空
         return self.async_create_entry(title="", data={})
