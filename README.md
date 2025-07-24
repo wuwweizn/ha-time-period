@@ -25,13 +25,7 @@
 1. 将 `custom_components/time_period/` 文件夹复制到你的 `config/custom_components/` 目录中。
 2. 重启 Home Assistant
 3. 在“设置 → 设备与服务 → 添加集成”搜索 “时间段” 并安装
-## 🧾 配置示例
 
-在 `configuration.yaml` 添加：
-
-```yaml
-sensor:
-- platform: time_period
 
 
 ## 贡献 无为智能
