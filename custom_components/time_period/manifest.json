@@ -1,10 +1,10 @@
 {
   "domain": "time_period",
   "name": "时间段 Time Period",
-  "version": "1.1.0",
-  "documentation": "https://github.com/你的github/time_period",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/your_repo/time_period",
   "requirements": [],
   "dependencies": [],
-  "codeowners": ["@你的GitHub用户名"],
-  "config_flow": true
+  "codeowners": ["@yourgithub"]
 }
