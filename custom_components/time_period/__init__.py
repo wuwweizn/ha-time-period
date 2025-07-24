@@ -9,6 +9,7 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up integration from UI."""
+    # 转发配置给 sensor 平台
     await hass.config_entries.async_forward_entry_setups(entry, ["sensor"])
     return True
 
