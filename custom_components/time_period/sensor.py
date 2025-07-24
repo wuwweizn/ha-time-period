@@ -1,4 +1,6 @@
-from datetime import datetime
+"""Sensor platform for Time Period Sensor."""
+from datetime import datetime, timedelta
+import asyncio
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.helpers.entity import EntityCategory
 
@@ -20,26 +22,25 @@ def get_time_period():
             return label
     return "未知"
 
-async def async_setup_platform(hass, config, async_add_entities, discovery_info=None):
-    async_add_entities([TimePeriodSensor()], True)
-
-async def async_setup_entry(hass, config_entry, async_add_entities):
+async def async_setup_entry(hass, entry, async_add_entities):
+    """Set up sensor entity from config entry."""
     async_add_entities([TimePeriodSensor()], True)
 
 class TimePeriodSensor(SensorEntity):
+    """Sensor that reports current time period."""
+
+    _attr_name = "当前时间段"
+    _attr_icon = "mdi:clock-time-eight-outline"
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
+    _attr_unique_id = "time_period_sensor"
+    _attr_should_poll = True  # 启用轮询自动更新
+
     def __init__(self):
-        self._attr_name = "当前时间段"
-        self._attr_icon = "mdi:clock-time-eight-outline"
-        self._attr_entity_category = EntityCategory.DIAGNOSTIC
+        self._state = get_time_period()
 
     @property
-    def unique_id(self):
-        return "time_period_sensor"
-
-    @property
-    def state(self):
-        return get_time_period()
+    def native_value(self):
+        return self._state
 
     async def async_update(self):
-        # 每次更新状态
-        self._attr_native_value = get_time_period()
+        self._state = get_time_period()
