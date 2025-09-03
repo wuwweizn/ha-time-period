@@ -3,8 +3,12 @@
   "name": "时间段 Time Period",
   "version": "1.0.0",
   "config_flow": true,
-  "documentation": "https://github.com/your_repo/time_period",
+  "documentation": "https://github.com/wuwweizn/time_period",
   "requirements": [],
   "dependencies": [],
-  "codeowners": ["@yourgithub"]
+  "codeowners": ["@wuwweizn"],
+  "hacs": {
+    "category": "integration",
+    "icon": "icon.png"
+  }
 }
