@@ -1,11 +1,8 @@
 {
   "name": "ha-time-period",
-  "content_in_root": true,
   "domains": ["time_period"],
   "homeassistant": "2023.11.0",
-  "zip_release": false,
-  "country": ["ALL"],
-  "hacs": "integration",
   "render_readme": true,
+  "hacs": "integration",
   "icon": "https://raw.githubusercontent.com/wuwweizn/ha-time-period/main/icon.png"
 }
