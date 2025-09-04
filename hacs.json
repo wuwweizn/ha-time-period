@@ -1,7 +1,7 @@
 {
   "name": "ha-time-period",
   "domains": ["time_period"],
-  "homeassistant": "2025.09.01",
+  "homeassistant": "2023.01.01",
   "render_readme": true,
   "hacs": "integration",
   "icon": "https://raw.githubusercontent.com/wuwweizn/ha-time-period/main/icon.png"
