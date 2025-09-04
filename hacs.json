@@ -7,5 +7,5 @@
   "country": ["ALL"],
   "hacs": "integration",
   "render_readme": true,
-  "icon": "icon.png"   ← 指定你的图标
+  "icon": "https://github.com/wuwweizn/ha-time-period/blob/main/icon.png"
 }
