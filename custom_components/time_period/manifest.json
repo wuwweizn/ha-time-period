@@ -6,10 +6,5 @@
   "documentation": "https://github.com/wuwweizn/time_period",
   "requirements": [],
   "dependencies": [],
-  "codeowners": ["@wuwweizn"],
-  "hacs": {
-    "category": "integration",
-    "icon": "icon.png"
-  }
+  "codeowners": ["@wuwweizn"]
 }
-
