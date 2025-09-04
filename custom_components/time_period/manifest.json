@@ -1,12 +1,13 @@
 {
   "domain": "time_period",
   "name": "时间段 Time Period",
-  "version": "v1.0.5",
+  "version": "1.0.0",
   "config_flow": true,
   "documentation": "https://github.com/wuwweizn/time_period",
   "requirements": [],
   "dependencies": [],
   "codeowners": ["@wuwweizn"]
 }
+
 
 
