@@ -1,0 +1,11 @@
+{
+  "name": "ha-time-period",
+  "content_in_root": true,
+  "domains": ["time_period"],
+  "homeassistant": "2023.11.0",
+  "zip_release": false,
+  "country": ["ALL"],
+  "hacs": "integration",
+  "render_readme": true,
+  "icon": "icon.png"   ← 指定你的图标
+}
